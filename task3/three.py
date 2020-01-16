@@ -5,12 +5,15 @@ class Node:
         self.right = None
         self.parent = None
 
+
 def lca(x, y):
     '''
-    This function will create a set of all ancestors of node x including x itself.
-    Then, in second loop it visit all ancestors of y.
-    The first ancestor of y that is an ancestor of x will be the first common ancestor.
-    So, This works in O(h) both time and space. here h is height of tree.
+    This function will create a set of all ancestors
+    of node x including x itself. Then, in second loop
+    it visit all ancestors of y. The first ancestor of y
+    that is an ancestor of x will be the first common ancestor.
+    So, This works in O(h) both time and space.
+    here h is height of tree.
     '''
     a_ancestors = set()
     while x:
@@ -21,6 +24,7 @@ def lca(x, y):
             return y
         y = y.parent
     return None
+
 
 def three():
     root = Node(1)
@@ -55,6 +59,7 @@ def three():
 
     for x, y in nlist:
         print(lca(x, y).value)
+
 
 if __name__ == "__main__":
     three()

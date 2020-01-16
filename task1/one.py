@@ -1,12 +1,14 @@
-def get_depths(d, l, level=1):
+def get_depths(d, klp, level=1):
     for k in d:
-        l.append((k,level))
+        klp.append((k, level))
         if isinstance(d[k], dict):
-            get_depths(d[k], l, level + 1)
+            get_depths(d[k], klp, level + 1)
 
-def print_depth(l):
-    for k, d in l:
+
+def print_depth(klp):
+    for k, d in klp:
         print(k, d)
+
 
 def one():
     dd = [
@@ -23,9 +25,10 @@ def one():
 
     for d in dd:
         if isinstance(d, dict):
-            l = []
-            get_depths(d, l)
-            print_depth(l)
+            klp = []
+            get_depths(d, klp)
+            print_depth(klp)
+
 
 if __name__ == "__main__":
     one()

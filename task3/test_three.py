@@ -1,6 +1,7 @@
 from unittest import main, TestCase
 from three import Node, lca
 
+
 class TestThree(TestCase):
     def test_three(self):
         root = Node(1)
@@ -32,12 +33,13 @@ class TestThree(TestCase):
         node4 = root.right.right
 
         nlist = [(node1, node2), (node3, node4)]
-        
+
         prime = [3, 3]
         r = []
         for x, y in nlist:
             r.append(lca(x, y).value)
         self.assertEqual(prime, r)
+
 
 if __name__ == '__main__':
     main()
