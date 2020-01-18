@@ -12,8 +12,7 @@ def lca(x, y):
     of node x including x itself. Then, in second loop
     it visit all ancestors of y. The first ancestor of y
     that is an ancestor of x will be the first common ancestor.
-    So, This works in O(h) both time and space.
-    here h is height of tree.
+    So, This works in O(n) both time and space.
     '''
     a_ancestors = set()
     while x:
